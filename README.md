@@ -50,19 +50,52 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 7. La función que calcula en enésimo número de la secuencia de Fibonacci está muy mal construido y consume bastante CPU para obtener la respuesta. Usando la consola del Browser documente los tiempos de respuesta para dicho endpoint usando los siguintes valores:
     * 1000000
+    
+    ![WhatsApp Image 2020-04-02 at 10 34 34 AM](https://user-images.githubusercontent.com/48154086/78269951-d8a58580-74cf-11ea-928a-296c67bab150.jpeg)
+  
     * 1010000
+    
+   ![WhatsApp Image 2020-04-02 at 10 35 53 AM](https://user-images.githubusercontent.com/48154086/78270257-3508a500-74d0-11ea-9718-abf5db078865.jpeg)
+   
     * 1020000
+    
+   ![WhatsApp Image 2020-04-02 at 9 54 20 AM (1)](https://user-images.githubusercontent.com/48154086/78269575-65037880-74cf-11ea-9049-22362ccb1735.jpeg)
+   
     * 1030000
+    
+    ![WhatsApp Image 2020-04-02 at 9 57 48 AM](https://user-images.githubusercontent.com/48154086/78269579-659c0f00-74cf-11ea-80ef-507dc999c241.jpeg)
+    
     * 1040000
+    
+   ![WhatsApp Image 2020-04-02 at 9 59 43 AM](https://user-images.githubusercontent.com/48154086/78269744-9bd98e80-74cf-11ea-8262-400a0f194b8a.jpeg)
+   
     * 1050000
+    
+    ![WhatsApp Image 2020-04-02 at 10 01 57 AM](https://user-images.githubusercontent.com/48154086/78269755-9da35200-74cf-11ea-9e79-cb80eed8ba70.jpeg)
+    
     * 1060000
+    
+   ![WhatsApp Image 2020-04-02 at 10 04 41 AM](https://user-images.githubusercontent.com/48154086/78269925-d2170e00-74cf-11ea-8c1f-9ce7c1326554.jpeg)
+    
     * 1070000
+    
+    ![WhatsApp Image 2020-04-02 at 10 06 39 AM](https://user-images.githubusercontent.com/48154086/78269927-d2afa480-74cf-11ea-8282-479cde326b5d.jpeg)
+    
     * 1080000
+    
+    ![WhatsApp Image 2020-04-02 at 10 09 44 AM](https://user-images.githubusercontent.com/48154086/78269935-d4796800-74cf-11ea-8d1b-9bcc4d803e67.jpeg)
+    
     * 1090000    
+    
+    ![WhatsApp Image 2020-04-02 at 10 13 01 AM](https://user-images.githubusercontent.com/48154086/78269938-d6432b80-74cf-11ea-836e-1eeaf613a51e.jpeg)
 
 8. Dírijase ahora a Azure y verifique el consumo de CPU para la VM. (Los resultados pueden tardar 5 minutos en aparecer).
 
 ![Imágen 2](images/part1/part1-vm-cpu.png)
+
+
+![WhatsApp Image 2020-04-02 at 9 53 15 AM](https://user-images.githubusercontent.com/48154086/78270380-5e293580-74d0-11ea-9a71-d335da6e35fa.jpeg)
+
 
 9. Ahora usaremos Postman para simular una carga concurrente a nuestro sistema. Siga estos pasos.
     * Instale newman con el comando `npm install newman -g`. Para conocer más de Newman consulte el siguiente [enlace](https://learning.getpostman.com/docs/postman/collection-runs/command-line-integration-with-newman/).
