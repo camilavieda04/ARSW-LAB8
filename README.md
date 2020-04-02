@@ -205,7 +205,18 @@ Tanto con el tamaño standard A0 que se uso en un comienzo como con el tamaño s
 **Preguntas**
 
 1. ¿Cuántos y cuáles recursos crea Azure junto con la VM?
+
+   - Sistema Operativo
+   - Tamaño 
+   - Almacenamiento
+   - Red 
+   - Uso de red 
+   
 2. ¿Brevemente describa para qué sirve cada recurso?
+
+   - Sistema Operativo: Es un software que actúa de interfaz entre los dispositivos de hardware y los programas de usuario o el usuario mismo para utilizar un computador. 
+   - Tamaño: Utilizamos A0 y A6 
+
 3. ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
 4. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
 5. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
