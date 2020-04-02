@@ -130,12 +130,76 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
     newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALANCING_AZURE].postman_environment.json -n 10
     ```
 
+![WhatsApp Image 2020-04-02 at 11 08 30 AM](https://user-images.githubusercontent.com/48154086/78272120-b5300a00-74d2-11ea-819e-8597eaf208d9.jpeg)
+
+
+
 10. La cantidad de CPU consumida es bastante grande y un conjunto considerable de peticiones concurrentes pueden hacer fallar nuestro servicio. Para solucionarlo usaremos una estrategia de Escalamiento Vertical. En Azure diríjase a la sección *size* y a continuación seleccione el tamaño `B2ms`.
 
 ![Imágen 3](images/part1/part1-vm-resize.png)
 
+![WhatsApp Image 2020-04-02 at 10 59 45 AM (1)](https://user-images.githubusercontent.com/48154086/78272198-d3960580-74d2-11ea-9bb6-2908376b0623.jpeg)
+
+
 11. Una vez el cambio se vea reflejado, repita el paso 7, 8 y 9.
+
+Paso 7. 
+
+   * Para calcular el 1000000 número de la secuencia de Fibonacci se tomó 51516 ms. 
+
+   ![WhatsApp Image 2020-04-02 at 10 34 34 AM (1)](https://user-images.githubusercontent.com/48154086/78273445-7307c800-74d4-11ea-9ef7-0fba31a27421.jpeg)
+   
+   * Para calcular 1010000 número de la secuencia de Fibonacci se tomó 52688 ms.
+  
+   ![WhatsApp Image 2020-04-02 at 10 35 53 AM (1)](https://user-images.githubusercontent.com/48154086/78273446-73a05e80-74d4-11ea-85ea-4e8676406cfc.jpeg)
+   
+   * Para calcular 1020000 número de la secuencia de Fibonacci se tomó 53544 ms.
+   
+   ![WhatsApp Image 2020-04-02 at 10 37 43 AM](https://user-images.githubusercontent.com/48154086/78273450-74d18b80-74d4-11ea-8e13-f4c2f92c8854.jpeg)
+   
+   * Para calcular 1030000 número de la secuencia de Fibonacci se tomó 54913 ms.
+   
+   ![WhatsApp Image 2020-04-02 at 10 38 52 AM](https://user-images.githubusercontent.com/48154086/78273455-7602b880-74d4-11ea-9664-45e113a2cc08.jpeg)
+   
+   * Para calcular 1040000 número de la secuencia de Fibonacci se tomó 55391 ms.
+   
+   ![WhatsApp Image 2020-04-02 at 10 40 03 AM](https://user-images.githubusercontent.com/48154086/78273460-77cc7c00-74d4-11ea-9a33-77ce78493a4b.jpeg)
+   
+   * Para calcular 1050000 número de la secuencia de Fibonacci se tomó 56249 ms.
+   
+   ![WhatsApp Image 2020-04-02 at 10 41 40 AM](https://user-images.githubusercontent.com/48154086/78273471-7ac76c80-74d4-11ea-85bb-d808f357117d.jpeg)
+   
+   * Para calcular 1060000 número de la secuencia de Fibonacci se tomó 57411 ms.
+   
+   ![WhatsApp Image 2020-04-02 at 10 43 32 AM](https://user-images.githubusercontent.com/48154086/78273478-7d29c680-74d4-11ea-9bbf-4d8b5f758cd0.jpeg)
+   
+   * Para calcular 1070000 número de la secuencia de Fibonacci se tomó 58434 ms.
+   
+   ![WhatsApp Image 2020-04-02 at 10 44 47 AM](https://user-images.githubusercontent.com/48154086/78273486-7f8c2080-74d4-11ea-8266-c102a17e2f0b.jpeg)
+   
+   * Para calcular 1080000 número de la secuencia de Fibonacci se tomó 59335 ms.
+   
+   ![WhatsApp Image 2020-04-02 at 10 46 18 AM](https://user-images.githubusercontent.com/48154086/78273494-82871100-74d4-11ea-9a78-b354831278b0.jpeg)
+   
+   * Para calcular 1090000 número de la secuencia de Fibonacci se tomó 60237 ms.
+   
+   ![WhatsApp Image 2020-04-02 at 10 47 53 AM](https://user-images.githubusercontent.com/48154086/78273498-85820180-74d4-11ea-876f-91ef361d9107.jpeg)
+
+Paso 8. 
+
+   ![WhatsApp Image 2020-04-02 at 10 48 55 AM](https://user-images.githubusercontent.com/48154086/78274336-adbe3000-74d5-11ea-8507-ea9a19e60e6b.jpeg)
+
+
+Paso 9. 
+
+   ![WhatsApp Image 2020-04-02 at 10 53 39 AM](https://user-images.githubusercontent.com/48154086/78274337-adbe3000-74d5-11ea-8166-218834e101a1.jpeg)
+
+
 12. Evalue el escenario de calidad asociado al requerimiento no funcional de escalabilidad y concluya si usando este modelo de escalabilidad logramos cumplirlo.
+
+Tanto con el tamaño standard A0 que se uso en un comienzo como con el tamaño standard A6 con el cual se buscaba mejorar la funcionalidad del sistema, nos damos cuenta de que en ambos casos al momento de realizar la consulta esta consume el 100% de la cpu y en ambos casos al momento de hacer solicitudes concurrentes con postman una de ellas falla. En conclusión, consideramos que usando este modelo NO se cumple con el requerimiento no funcional de escalabilidad ya que el consumo de cpu supera el 70% y no funciona correctamente solicitudes concurrentes, aunque cabe mencionar que se redujo el tiempo de la consulta casi en la mitad pasando de 102000 ms a 55000 ms aproximadamente.
+
+
 13. Vuelva a dejar la VM en el tamaño inicial para evitar cobros adicionales.
 
 **Preguntas**
