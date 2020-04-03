@@ -235,7 +235,7 @@ Tanto con el tamaño standard A0 que se uso en un comienzo como con el tamaño s
 
 5. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
 
-   ![CPU](https://user-images.githubusercontent.com/48154086/78315730-7a09f700-7523-11ea-970d-e6b38c3f7269.PNG)
+   ![WhatsApp Image 2020-04-02 at 9 53 15 AM](https://user-images.githubusercontent.com/48154086/78270380-5e293580-74d0-11ea-9a71-d335da6e35fa.jpeg)
 
 6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
     * Tiempos de ejecución de cada petición.
