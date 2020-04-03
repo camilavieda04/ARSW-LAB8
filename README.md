@@ -231,6 +231,10 @@ Tanto con el tamaño standard A0 que se uso en un comienzo como con el tamaño s
 
 4. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
 5. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
+
+![CPU](https://user-images.githubusercontent.com/48154086/78315730-7a09f700-7523-11ea-970d-e6b38c3f7269.PNG)
+
+
 6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
     * Tiempos de ejecución de cada petición.
     * Si hubo fallos documentelos y explique.
