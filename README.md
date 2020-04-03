@@ -235,9 +235,14 @@ Tanto con el tamaño standard A0 que se uso en un comienzo como con el tamaño s
 
 5. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
 
+Al momento en el que el cliente hace la solicitud desde el browser el consumo de CPU llega al 100% lo cual no cumple con el requerimiento no funcional de escalabilidad como se muestra a continuación: 
+
    ![WhatsApp Image 2020-04-02 at 9 53 15 AM](https://user-images.githubusercontent.com/48154086/78270380-5e293580-74d0-11ea-9a71-d335da6e35fa.jpeg)
 
 6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
+
+   ![WhatsApp Image 2020-04-02 at 9 38 21 PM](https://user-images.githubusercontent.com/48154086/78318472-69a94a80-752a-11ea-9ad4-904cedfeba1e.jpeg)
+
     * Tiempos de ejecución de cada petición.
     * Si hubo fallos documentelos y explique.
 
