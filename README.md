@@ -206,18 +206,29 @@ Tanto con el tamaño standard A0 que se uso en un comienzo como con el tamaño s
 
 1. ¿Cuántos y cuáles recursos crea Azure junto con la VM?
 
-   - Sistema Operativo
-   - Tamaño 
-   - Almacenamiento
-   - Red 
-   - Uso de red 
+   ![image](https://user-images.githubusercontent.com/44879884/78311065-6f486580-7515-11ea-9c70-755e506f2368.png)
+
    
 2. ¿Brevemente describa para qué sirve cada recurso?
 
-   - Sistema Operativo: Es un software que actúa de interfaz entre los dispositivos de hardware y los programas de usuario o el usuario mismo para utilizar un computador. 
-   - Tamaño: Utilizamos A0 y A6 
+   - **Virtual network:**
+   - **Storage account:**
+   - **Virtual machine:** 
+   - **Public IP address:**
+   - **Network security group:**
+   - **Network interface:**
+   - **Disk:**
 
-3. ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
+3. 
+
+   - ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`?
+      
+      Porque estaríamos cerrando la ejecución del programa, es por eso que se usa el comando `forever start FibonacciApp.js`. Este comando permite que la aplicación siga corriendo mientras la maquina esta prendida.
+
+   - ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
+      
+      Porque si no abrimos el puerto 3000 que es por donde está corriendo la aplicación, desde un equipo externo a la maquina virtual creada en azure no se podría consultar desde un browser la dirección: http://13.91.82.159:3000/fibonacci/123 ya que el puerto no estaría abierto.
+
 4. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
 5. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
 6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
