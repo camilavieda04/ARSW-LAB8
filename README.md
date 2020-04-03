@@ -271,6 +271,15 @@ Al momento en el que el cliente hace la solicitud desde el browser el consumo de
 
 11. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
 
+El comportamiento del sistema no es porcentualmente mejor, en algunas de las solicitudes concurrentes que se envian este no es capaz de resolverlas.  
+
+   ![WhatsApp Image 2020-04-02 at 9 46 20 PM](https://user-images.githubusercontent.com/48154086/78319008-cce7ac80-752b-11ea-863f-a0096ff2164a.jpeg)
+   ![WhatsApp Image 2020-04-02 at 9 58 12 PM](https://user-images.githubusercontent.com/48154086/78319650-2ef4e180-752d-11ea-8aac-81210257cb8b.jpeg)
+   ![WhatsApp Image 2020-04-02 at 9 58 25 PM](https://user-images.githubusercontent.com/48154086/78319654-2f8d7800-752d-11ea-989d-5a26f3d3d9ff.jpeg)
+   
+   
+
+
 ### Parte 2 - Escalabilidad horizontal
 
 #### Crear el Balanceador de Carga
