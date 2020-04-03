@@ -230,18 +230,35 @@ Tanto con el tamaño standard A0 que se uso en un comienzo como con el tamaño s
       Porque si no abrimos el puerto 3000 que es por donde está corriendo la aplicación, desde un equipo externo a la maquina virtual creada en azure no se podría consultar desde un browser la dirección: http://13.91.82.159:3000/fibonacci/123 ya que el puerto no estaría abierto.
 
 4. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
+
+   ![image](https://user-images.githubusercontent.com/44879884/78314953-344c2f00-7521-11ea-8286-ff7fd53d06e1.png)
+
 5. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
 
-![CPU](https://user-images.githubusercontent.com/48154086/78315730-7a09f700-7523-11ea-970d-e6b38c3f7269.PNG)
-
+   ![CPU](https://user-images.githubusercontent.com/48154086/78315730-7a09f700-7523-11ea-970d-e6b38c3f7269.PNG)
 
 6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
     * Tiempos de ejecución de cada petición.
     * Si hubo fallos documentelos y explique.
-7. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
+
+7. ¿Cuál es la diferencia entre los tamaños `A0` y `A6` (no solo busque especificaciones de infraestructura)?
+
+   -**A0 standard:** Tiene 1 vCPUs, 0.75GiB de RAM, 1 data disk y es ofrecida por un precio de 14.60 dólares mensuales.
+
+   -**A6 standard:** Tiene 4 vCPUs, 28GiB de RAM, 8 data disk y es ofrecida por un precio de 365.00 dólares mensuales.
+
 8. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?, ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
+
+   Aunque se mejoro el tiempo de respuesta de las solicitudes el consumo de CPU sigue excediendo el 70% y las solicitudes concurrentes no funcionan correctamente.
+
 9. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
+
+   Pues el rendimiento de la máquina virtual mejora considerablemente, pero la aplicación no aprovecha todos los recursos que la maquina ofrece por esto sigue presentando una alta carga de CPU y no funciona correctamente al momento de solicitudes concurrentes. Y la desventaja más grande es el aumento de 350 dólares mensuales.
+
 10. ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
+
+   En el consumo de CPU bajo el tiempo en el que el consumo era excesivo pero aun así sigue superando el 70% de consumo y en el tiempo de las consultas las mantuvo todas casi en un mismo tiempo de aproximadamente entre 50000ms y 60000ms, mientras que con el primer tamaño los tiempos estuvieron entre 50000ms y 120000ms.  
+
 11. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
 
 ### Parte 2 - Escalabilidad horizontal
@@ -339,7 +356,3 @@ newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALAN
 * ¿Cuál es el propósito del *Network Security Group*?
 * Informe de newman 1 (Punto 2)
 * Presente el Diagrama de Despliegue de la solución.
-
-
-
-
