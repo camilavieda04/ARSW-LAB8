@@ -244,7 +244,12 @@ Al momento en el que el cliente hace la solicitud desde el browser el consumo de
    ![WhatsApp Image 2020-04-02 at 9 38 21 PM](https://user-images.githubusercontent.com/48154086/78318472-69a94a80-752a-11ea-9ad4-904cedfeba1e.jpeg)
 
     * Tiempos de ejecución de cada petición.
+    
+    El promedio de los tiempos de ejecución es de 1 minuto 39,6 segundos. 
+    
     * Si hubo fallos documentelos y explique.
+    
+    No hubo ningún fallo. 
 
 7. ¿Cuál es la diferencia entre los tamaños `A0` y `A6` (no solo busque especificaciones de infraestructura)?
 
