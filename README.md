@@ -348,12 +348,22 @@ Realice este proceso para las 3 VMs, por ahora lo haremos a mano una por una, si
 
 1. Porsupuesto el endpoint de acceso a nuestro sistema será la IP pública del balanceador de carga, primero verifiquemos que los servicios básicos están funcionando, consuma los siguientes recursos:
 
-```
-http://52.155.223.248/
-http://52.155.223.248/fibonacci/1
-```
+MV1 Ip: 52.146.59.95
+
+![image](https://user-images.githubusercontent.com/44879884/79386056-2c33bc80-7f2f-11ea-9223-c42033204d26.png)
+
+MV2 Ip: 52.152.205.185
+
+![image](https://user-images.githubusercontent.com/44879884/79386073-36ee5180-7f2f-11ea-836c-8ed1b117df02.png)
+
+Mv3 Ip: 52.186.35.43
+
+![image](https://user-images.githubusercontent.com/44879884/79386116-4a012180-7f2f-11ea-9ee1-47eab9f3600e.png)
 
 2. Realice las pruebas de carga con `newman` que se realizaron en la parte 1 y haga un informe comparativo donde contraste: tiempos de respuesta, cantidad de peticiones respondidas con éxito, costos de las 2 infraestrucruras, es decir, la que desarrollamos con balanceo de carga horizontal y la que se hizo con una maquina virtual escalada.
+
+![image](https://user-images.githubusercontent.com/44879884/79385838-d7904180-7f2e-11ea-9ce0-192972dd9164.png)
+
 
 3. Agregue una 4 maquina virtual y realice las pruebas de newman, pero esta vez no lance 2 peticiones en paralelo, sino que incrementelo a 4. Haga un informe donde presente el comportamiento de la CPU de las 4 VM y explique porque la tasa de éxito de las peticiones aumento con este estilo de escalabilidad.
 
