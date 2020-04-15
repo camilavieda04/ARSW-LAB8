@@ -367,6 +367,25 @@ newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALAN
 **Preguntas**
 
 * ¿Cuáles son los tipos de balanceadores de carga en Azure y en qué se diferencian?, ¿Qué es SKU, qué tipos hay y en qué se diferencian?, ¿Por qué el balanceador de carga necesita una IP pública?
+
+Tipos de Balanceadores de Carga en Azure:
+
+  - Public load balancer: Puede proporcionar conexiones salientes paraa máquinas virtuales dentro de su red virtual. Estas conexiones se logran traduciendo sus direcciones IP privadas a direcciones IP públicas. Los equilibradores de carga públicos se usan para equilibrar la carga de tráfico de internet a sus máquinas virtuales. 
+  
+  - Internal or private load balancer: Se necesitan IP privadas solo en la interfaz. Los equilibradores de carga internos se utilizan para equilibrar el tráfico dentro de una red virtual. Se puede acceder a una interfaz de equilibrador de carga desde una red local en un escenario híbrido.
+  
+ SKU: Son los diferentes niveles de servicio en los que esta Azure Container Registry. Estos        proporcionan precios predecibles y varias opciones para alinearse con la capacidad y los patrones de uso de su registro privado de Docker en Azure. 
+ 
+ Tipos de SKU:
+ 
+ -  Básico: Los registros básicos tienen las mismas capacidades programáticas que Standard y Premium (como la integración de autenticación de Azure Active Directory, eliminación de imágenes y webhooks).
+ 
+ - Estándar: Los registros estándar ofrecen las mismas capacidades que Basic, con un mayor almacenamiento incluido y rendimiento de imagen. Los registros estándar deberían satisfacer las necesidades de la mayoría de los escenarios de producción. 
+ 
+ - Premium: Proporcionan la mayor cantidad de almacenamiento incluido y operaciones concurrentes, lo que permite escenarios de gran volumen. Ademas de un mayor rendimiento de la imagen, Premium agrega características como la replicación geográfica para administrar un registro único en varias regiones, la confianza de contenido para la firma de etiquetas de imagen, firewalls y redes viruales para registrir el acceso al registro. 
+ 
+    
+
 * ¿Cuál es el propósito del *Backend Pool*?
 * ¿Cuál es el propósito del *Health Probe*?
 * ¿Cuál es el propósito de la *Load Balancing Rule*? ¿Qué tipos de sesión persistente existen, por qué esto es importante y cómo puede afectar la escalabilidad del sistema?.
