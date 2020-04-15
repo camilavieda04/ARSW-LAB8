@@ -390,11 +390,18 @@ Tipos de Balanceadores de Carga en Azure:
   
 * ¿Cuál es el propósito del *Backend Pool*?
 
-Es una colección de configuraciones de IP de máquina virtual que hace referencia al grupo de back-end de Load Balancer.
-
+Es una agrupación lógica de sus instancias de aplicaciones en todo el mundo que reciben el mismo tráfico y responden con el comportamiento esperado. Estos backends se implementan en diferentes regiones o dentro de la misma región. Todos los backends pueden estar en modo de implementación Activo/Activo o en Activo/Pasiva.  
 
 * ¿Cuál es el propósito del *Health Probe*?
+
+Front door envía solicitudes periódicas de sondeo HTTP/HTTPS a cada uno de los backends configurados. Las solicitudes de prueba determinan la proximidad y el estado de cada back-end para equilibrar la carga de sus solicitudes de usuario final. La configuración del Health probe para un grupo de backend define como sondeamos el estado de salud de los backends de la aplicación. 
+
 * ¿Cuál es el propósito de la *Load Balancing Rule*? ¿Qué tipos de sesión persistente existen, por qué esto es importante y cómo puede afectar la escalabilidad del sistema?.
+
+Load Balancing Rule: Se utiliza para definir como se distribuye el tráfico a las máquinas virtuales. 
+
+Sesion Persistente: Permite a los usuarios permanecer conectados después de cerrar y volver a abrir la ventana del explorador. 
+
 * ¿Qué es una *Virtual Network*? ¿Qué es una *Subnet*? ¿Para qué sirven los *address space* y *address range*?
 * ¿Qué son las *Availability Zone* y por qué seleccionamos 3 diferentes zonas?. ¿Qué significa que una IP sea *zone-redundant*?
 * ¿Cuál es el propósito del *Network Security Group*?
