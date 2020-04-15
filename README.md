@@ -382,11 +382,17 @@ Tipos de Balanceadores de Carga en Azure:
  
  - Estándar: Los registros estándar ofrecen las mismas capacidades que Basic, con un mayor almacenamiento incluido y rendimiento de imagen. Los registros estándar deberían satisfacer las necesidades de la mayoría de los escenarios de producción. 
  
- - Premium: Proporcionan la mayor cantidad de almacenamiento incluido y operaciones concurrentes, lo que permite escenarios de gran volumen. Ademas de un mayor rendimiento de la imagen, Premium agrega características como la replicación geográfica para administrar un registro único en varias regiones, la confianza de contenido para la firma de etiquetas de imagen, firewalls y redes viruales para registrir el acceso al registro. 
+ - Premium: Proporcionan la mayor cantidad de almacenamiento incluido y operaciones concurrentes, lo que permite escenarios de gran volumen. Ademas de un mayor rendimiento de la imagen, Premium agrega características como la replicación geográfica para administrar un registro único en varias regiones, la confianza de contenido para la firma de etiquetas de imagen, firewalls y redes virtuales para registrir el acceso al registro. 
  
-    
-
+  ¿Por qué el balanceador de carga necesita una IP pública?
+  
+  Mediante la dirección IP pública y el puerto se realiza el desvío de puertos para acceder a las máquinas virtuales de una red virtual. 
+  
 * ¿Cuál es el propósito del *Backend Pool*?
+
+Es una colección de configuraciones de IP de máquina virtual que hace referencia al grupo de back-end de Load Balancer.
+
+
 * ¿Cuál es el propósito del *Health Probe*?
 * ¿Cuál es el propósito de la *Load Balancing Rule*? ¿Qué tipos de sesión persistente existen, por qué esto es importante y cómo puede afectar la escalabilidad del sistema?.
 * ¿Qué es una *Virtual Network*? ¿Qué es una *Subnet*? ¿Para qué sirven los *address space* y *address range*?
