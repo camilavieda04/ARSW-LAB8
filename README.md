@@ -413,7 +413,27 @@ Load Balancing Rule: Se utiliza para definir como se distribuye el tráfico a la
 Sesion Persistente: Permite a los usuarios permanecer conectados después de cerrar y volver a abrir la ventana del explorador. 
 
 * ¿Qué es una *Virtual Network*? ¿Qué es una *Subnet*? ¿Para qué sirven los *address space* y *address range*?
+
+- Virtual Network: Es el bloque de construcción fundamental para su red privada en Azure. VNet permite que muchos tipos de recursos de Azure, como las máquinas virtuales se comuniquen de manera segura entre sí, Internet y redes locales. 
+
+- Subnet: Permiten segmentar la red virtual en una o más subredes y asignar una parte del espacio de direcciones de la red virtual a cada subred. Luego puede implementar recursos de Azure en una subred específica. Esto también mejora la eficiencia de asignación de direcciones. Puede proteger los recursos dentro de las subredes utilizando grupos de seguridad de red. 
+
+- Address Space: Al crear una red virtual, debe especificar un espcaio de direcciones IP privadas personalizadas utilizando direcciones públicas y privadas. Azure asigna recursos en una red virtual a una dirección IP privada desde el espacio de direcciones que asigne. 
+
+- Address range: El rango debe estar dentro del espacio de direcciones que ingresó para la red virtual. El rango más pequeño que puede especificar es /29, que proporciona ocho direcciones IP para la subred. 
+
 * ¿Qué son las *Availability Zone* y por qué seleccionamos 3 diferentes zonas?. ¿Qué significa que una IP sea *zone-redundant*?
+
+- Availability Zone: Es una oferta de alta disponibilidad que protege sus aplicaciones y datos de fallas en el centro de datos. Las zonas de disponibilidad son ubicaciones físicas únicas dentro de una región de Azure. Cada zona está compuesta por uno o más centro de datos equipados.
+
+Seleccionamos 3 zonas para garantizar la resistencia en todas las regiones habilitadas. 
+
+Zone Redundant: La plataforma se replica automáticamente en todas las zonas.
+
 * ¿Cuál es el propósito del *Network Security Group*?
+
+Network Security Group: Es usado para filtrar el tráfico de entrada y salida de los recursos de Azure en una red virtual de Azure. Se puede definir reglas de seguridad que permiten o niegan el tráfico es necesario para cada regla, especificar el origen y el destino, el puerto y el protocolo.
+
 * Informe de newman 1 (Punto 2)
+
 * Presente el Diagrama de Despliegue de la solución.
